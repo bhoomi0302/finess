@@ -1,0 +1,82 @@
+<section class="content">
+  <div class="container-fluid">
+    <!-- breadcrumb -->
+    <div class="block-header">
+      <div class="block-header">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <ul class="breadcrumb breadcrumb-style">
+              <li class="breadcrumb-item">
+                <h4 class="page-title">Browse</h4>
+              </li>
+              <li class="breadcrumb-item bcrumb-1">
+                <a routerLink="/fitness/home">
+                  <i class="fas fa-home"></i> Home</a
+                >
+              </li>
+
+              <li class="breadcrumb-item active">Browse</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+    <!-- walking chart -->
+
+      <div class="col-6">
+        <div class="card">
+          <div class="header"><h5>Walking</h5></div>
+          <apx-chart
+            [series]="walkingChartOptions.series"
+            [chart]="walkingChartOptions.chart"
+            [xaxis]="walkingChartOptions.xaxis"
+            [yaxis]="walkingChartOptions.yaxis"
+            [colors]="walkingChartOptions.colors"
+            [stroke]="walkingChartOptions.stroke"
+            [legend]="walkingChartOptions.legend"
+            [tooltip]="walkingChartOptions.tooltip"
+            [dataLabels]="walkingChartOptions.dataLabels"
+          ></apx-chart>
+        </div>
+      </div>
+
+      <!-- cycling chart -->
+      <div class="col-6">
+        <div class="card">
+          <div class="header"><h4>Cycling</h4></div>
+          <apx-chart
+            [series]="cyclingChartOptions.series"
+            [chart]="cyclingChartOptions.chart"
+            [xaxis]="cyclingChartOptions.xaxis"
+            [yaxis]="cyclingChartOptions.yaxis"
+            [colors]="cyclingChartOptions.colors"
+            [stroke]="cyclingChartOptions.stroke"
+            [legend]="cyclingChartOptions.legend"
+            [tooltip]="cyclingChartOptions.tooltip"
+            [dataLabels]="cyclingChartOptions.dataLabels"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- yoga chart -->
+      <div class="col-6">
+        <div class="card">
+          <div class="header"><h5>Yoga</h5></div>
+          <apx-chart
+            [series]="yogaChartOptions.series"
+            [chart]="yogaChartOptions.chart"
+            [xaxis]="yogaChartOptions.xaxis"
+            [yaxis]="yogaChartOptions.yaxis"
+            [colors]="yogaChartOptions.colors"
+            [stroke]="yogaChartOptions.stroke"
+            [legend]="yogaChartOptions.legend"
+            [tooltip]="yogaChartOptions.tooltip"
+            [dataLabels]="yogaChartOptions.dataLabels"
+          ></apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

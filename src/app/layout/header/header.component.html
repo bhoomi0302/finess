@@ -1,0 +1,456 @@
+<nav #navbar class="navbar active">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!-- <a class="navbar-brand" routerLink="{{ homePage }}">
+        <img
+          src="./assets/images/pages/health-and-fitness-logo.jpg"
+          alt=""
+          style="height: 64px; width: 60%"
+        />
+      </a> -->
+    </div>
+    <div class="collapse navbar-collapse" [ngbCollapse]="isNavbarCollapsed">
+      <ul class="nav navbar-nav navbar-right psr-3">
+        <li class="patient-search psr-5 mt-2">
+          <button mat-button (click)="homePageRedirect()">Home</button>
+        </li>
+        <li class="patient-search psr-5 mt-2">
+          <button mat-button (click)="browseData()">Browse</button>
+        </li>
+        <!--  <li class="patient-search psr-4">
+          <button mat-button (click)="profile()">Profile</button>
+        </li>
+         <li class="patient-search psr-4">
+          <button mat-button (click)="logoutProfile()">Logout</button>
+        </li> -->
+        <li class="patient-search psr-5 mb-3 mt-1">
+          <div class="display-dropdown">
+            <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+              <ngx-avatar
+                name="Test Test"
+                size="50"
+                class="msr-3 profile-avtar d-table-cell"
+              ></ngx-avatar>
+
+              <!-- <img
+                class="profile-image"
+                src="./assets/images/pages/drop-down.png"
+              /> -->
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <mat-menu #profileMenu="matMenu" [overlapTrigger]="false">
+      <div class="dropdown d-grid">
+        <button mat-button (click)="profile()">Profile</button>
+        <button mat-button (click)="logoutProfile()">Sign Out</button>
+      </div>
+    </mat-menu>
+
+    <!-- <div class="collapse navbar-collapse" [ngbCollapse]="isNavbarCollapsed">
+      <ul class="float-start collapse-menu-icon">
+        <li>
+          <button
+            mat-icon-button
+            (click)="callSidemenuCollapse()"
+            class="sidemenu-collapse"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+        </li>
+      </ul>
+    </div> -->
+  </div>
+</nav>
+<!-- <mat-drawer-container class="example-container profile-sidebar" autosize>
+  <mat-drawer
+    #sideNav
+    class="example-sidenav"
+    mode="over"
+    [position]="nav_position"
+  >
+    <div class="profile-info-card">
+      <div class="profile-close">
+        <button mat-button (click)="logout()">
+          <img
+            class="custom-button-height"
+            src="./assets/images/wcg-image/wilson-consulting-logo.png"
+          />
+          <span class="msl-2">Sign Out </span>
+        </button>
+        <button mat-icon-button class="float-right" (click)="sideNav.toggle()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+
+      <div class="profile-info w-100">
+        <img
+          src="{{ userImg }}"
+          class="rounded-circle msr-4"
+          width="60"
+          height="60"
+          alt="User"
+          id="settingBtn"
+        />
+        <ngx-avatar
+          name="David John"
+          size="50"
+          class="msr-3 profile-avtar"
+        ></ngx-avatar>
+         <div>
+          <h5>
+            {{ currentUser.last_name + ", " + currentUser.first_name }}
+            ({{ currentUser.role_name }})
+          </h5>
+          <span class="custom-span">{{ currentUser.user.email }}</span>
+
+          <span class="custom-span"
+            >Username :
+            <p style="display: initial; color: rgba(0, 0, 0, 0.85)">
+              {{ currentUser.user.username }}
+            </p></span
+          >
+          <div class="location">
+            <button
+              mat-button
+              color="primary"
+              (click)="changeLocation()"
+              style="margin-top: -7px"
+            >
+              Change
+            </button>
+          </div>
+          <div style="margin-left: -15px">
+            <button
+              mat-button
+              color="primary"
+              (click)="showForm('editProfile')"
+            >
+              Edit Profile
+            </button>
+            <button
+              mat-button
+              color="primary"
+              (click)="showForm('changePassword')"
+            >
+              Change Password
+            </button>
+          </div>
+        </div> 
+      </div>
+    </div>
+
+     <div class="profileSettings">
+      <p class="password-expiry-info" *ngIf="currentUser.showDay > -1">
+        Your password will expire in
+        {{ currentUser.showDay }} days.
+      </p>
+      <p class="password-expiry-info" *ngIf="currentUser.showDay == -1">
+        Your password has already expired
+      </p>
+      <div
+        class="edit-profile align-left"
+        *ngIf="showFormType == 'editProfile'"
+      >
+        <form [formGroup]="profileForm">
+          <div class="row">
+            <div class="header">
+              <h6 class="form-header mb-4">Personal Information</h6>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="first_name" required />
+                <mat-error>
+                  <span
+                    *ngIf="profileForm.get('first_name').hasError('required')"
+                    >First Name is required</span
+                  >
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="last_name" required />
+                <mat-error>
+                  <span
+                    *ngIf="profileForm.get('last_name').hasError('required')"
+                    >Last Name is required</span
+                  >
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-lg-12 col-md-12 col-12 profile-form-info">
+              <div class="row">
+                <span class="custom-span">Username</span>
+                <p>:</p>
+                <p class="profile-form-data">
+                  {{ currentUser.user.username }}
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-12 profile-form-info">
+              <div class="row">
+                <span class="custom-span">Email</span>
+                <p>:</p>
+                <p class="profile-form-data" *ngIf="hideEmailBox">
+                  {{ currentUser.user.email }}
+                </p>
+                <p class="profile-form-data" *ngIf="!hideEmailBox">
+                  <mat-form-field
+                    class="example-full-width filter-form"
+                    appearance="outline"
+                  >
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" required />
+                    <mat-error
+                      *ngIf="profileForm.get('email').hasError('required')"
+                    >
+                      Email is required
+                    </mat-error>
+                    <mat-error
+                      *ngIf="profileForm.get('email').hasError('pattern')"
+                    >
+                      Please enter valid email address
+                    </mat-error>
+                  </mat-form-field>
+                </p>
+                <div class="profile-form-button">
+                  <button
+                    mat-icon-button
+                    (click)="hideEmailBox = !hideEmailBox"
+                    type="button"
+                  >
+                    <img
+                      src="./assets/images/pages/edit1.png"
+                      *ngIf="hideEmailBox"
+                    />
+                    <mat-icon *ngIf="!hideEmailBox">close</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="example-button-row mt-4">
+            <button
+              mat-raised-button
+              color="primary"
+              [disabled]="!profileForm.valid"
+              class="btn-space"
+              (click)="onSubmit()"
+            >
+              Save
+            </button>
+            <button type="button" mat-button (click)="onCancel()">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div
+        class="edit-profile align-left"
+        *ngIf="showFormType == 'changePassword'"
+      >
+        <form [formGroup]="passwordForm">
+          <div class="row">
+            <div class="header">
+              <h6 class="form-header mb-4"><strong>Change Password</strong></h6>
+            </div>
+            <div class="col-lg-12 col-md-12">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Current Password</mat-label>
+                <input
+                  matInput
+                  [type]="hidepassword ? 'password' : 'text'"
+                  formControlName="current_password"
+                  required
+                />
+                <a
+                  class="show-pwd-icon"
+                  href="#"
+                  onClick="return false;"
+                  matSuffix
+                  (click)="hidepassword = !hidepassword"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hidepassword"
+                >
+                  <mat-icon>{{
+                    hidepassword ? "visibility_off" : "visibility"
+                  }}</mat-icon>
+                </a>
+                <mat-error>
+                  <span
+                    *ngIf="
+                      passwordForm.get('current_password').hasError('required')
+                    "
+                    >Password is required</span
+                  >
+
+                  <span
+                    *ngIf="
+                      passwordForm.get('current_password').hasError('minlength')
+                    "
+                    >Password must contain at least
+                    {{
+                      passwordForm.get("current_password").errors.minlength
+                        .requiredLength
+                    }}
+                    Characters.</span
+                  >
+                  <span
+                    *ngIf="
+                      !passwordForm
+                        .get('current_password')
+                        .hasError('required') &&
+                      !passwordForm
+                        .get('current_password')
+                        .hasError('minlength')
+                    "
+                    >Your password must contain at least one uppercase, one
+                    number, letter</span
+                  >
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-lg-12 col-md-12">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>New Password</mat-label>
+                <input
+                  matInput
+                  [type]="hidenewpassword ? 'password' : 'text'"
+                  formControlName="new_password"
+                  required
+                />
+                <a
+                  class="show-pwd-icon"
+                  href="#"
+                  onClick="return false;"
+                  matSuffix
+                  (click)="hidenewpassword = !hidenewpassword"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hidenewpassword"
+                >
+                  <mat-icon>{{
+                    hidenewpassword ? "visibility_off" : "visibility"
+                  }}</mat-icon>
+                </a>
+                <mat-error>
+                  <span
+                    *ngIf="
+                      passwordForm.get('new_password').hasError('required')
+                    "
+                    >New Password is required</span
+                  >
+
+                  <span
+                    *ngIf="
+                      passwordForm.get('new_password').hasError('minlength')
+                    "
+                    >Password must contain at least
+                    {{
+                      passwordForm.get("new_password").errors.minlength
+                        .requiredLength
+                    }}
+                    Characters.</span
+                  >
+
+                  <span
+                    *ngIf="
+                      !passwordForm.get('new_password').hasError('required') &&
+                      !passwordForm.get('new_password').hasError('minlength')
+                    "
+                    >Your new password must contain at least one uppercase, one
+                    number, letter</span
+                  >
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-lg-12 col-md-12">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Confirm Password</mat-label>
+                <input
+                  matInput
+                  [type]="hideconfirmpassword ? 'password' : 'text'"
+                  formControlName="confirm_password"
+                  required
+                />
+                <a
+                  class="show-pwd-icon"
+                  href="#"
+                  onClick="return false;"
+                  matSuffix
+                  (click)="hideconfirmpassword = !hideconfirmpassword"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hideconfirmpassword"
+                >
+                  <mat-icon>{{
+                    hideconfirmpassword ? "visibility_off" : "visibility"
+                  }}</mat-icon>
+                </a>
+                <mat-error>
+                  <span
+                    *ngIf="
+                      passwordForm.get('confirm_password').hasError('required')
+                    "
+                    >Confirm Password is required</span
+                  >
+
+                  <span
+                    *ngIf="
+                      passwordForm.get('confirm_password').hasError('minlength')
+                    "
+                    >Password must contain at least
+                    {{
+                      passwordForm.get("confirm_password").errors.minlength
+                        .requiredLength
+                    }}
+                    Characters.</span
+                  >
+                  <span
+                    *ngIf="
+                      !passwordForm
+                        .get('confirm_password')
+                        .hasError('required') &&
+                      !passwordForm
+                        .get('confirm_password')
+                        .hasError('minlength')
+                    "
+                    >Your confirm password must contain at least one uppercase,
+                    one number, letter</span
+                  >
+
+                  <span
+                    *ngIf="
+                      passwordForm
+                        .get('confirm_password')
+                        .hasError('passwordsNotMatching')
+                    "
+                    >New Passwords and Confirm password must match</span
+                  >
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="example-button-row mt-4">
+            <button
+              class="btn-space"
+              [disabled]="!passwordForm.valid"
+              mat-raised-button
+              color="primary"
+              (click)="changePassword()"
+            >
+              Change
+            </button>
+            <button mat-button type="button" (click)="onCancel()">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div> 
+  </mat-drawer>
+</mat-drawer-container> -->

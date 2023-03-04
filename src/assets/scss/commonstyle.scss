@@ -1,0 +1,16 @@
+@import "~bootstrap/scss/bootstrap";
+
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+
+@import "common/_general.scss";
+// @import "common/_helpers.scss";
+@import "common/_media.scss";
+@import "common/_animation.scss";
+
+@import "fonts/fontawesome/fontawesome.scss";
+@import "fonts/fontawesome/regular.scss";
+@import "fonts/fontawesome/solid.scss";
+@import "fonts/fontawesome/brands.scss";
+
+@import "plugins/_tables.scss";

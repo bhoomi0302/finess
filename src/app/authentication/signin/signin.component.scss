@@ -1,0 +1,27 @@
+.auth-form-section {
+  position: relative;
+}
+
+.form-section {
+  position: absolute;
+  top: 50%;
+  background: white;
+  box-shadow: rgb(0 0 0 / 25%) 0px 5px 15px;
+
+  padding: 20px 142px;
+  overflow: auto;
+  height: auto;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.innovation-logo {
+  height: 159px;
+  width: 60%;
+}
+
+.image {
+  text-align: center;
+}

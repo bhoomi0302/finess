@@ -1,0 +1,56 @@
+<div class="auth-container">
+  <div class="row auth-main">
+    <div
+      class="col-sm-12 auth-form-section"
+      style="background-image: url(assets/images/pages/login-background.png)"
+    >
+      <div class="form-section col-xl-5 col-md-5 col-11">
+        <div class="row">
+          <div>
+            <div>
+              <div class="header text-center mb-4"><h5>Sign up</h5></div>
+              <!-- <div class="image">
+                <img
+                  class="innovation-logo mb-3"
+                  src="./assets/images/pages/health-and-fitness-logo.jpg"
+                />
+              </div> -->
+
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Username or Email</mat-label>
+                <input matInput />
+              </mat-form-field>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput />
+              </mat-form-field>
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput />
+              </mat-form-field>
+              <!-- <h2 class="welcome-msg mb-5 mt-3 align-center">Sign in</h2> -->
+              <div class="col-3 m-auto">
+                <button
+                  mat-raised-button
+                  color="primary"
+                  class="auth-form-btn"
+                  type="submit"
+                  (click)="logIn()"
+                >
+                  Sign up
+                </button>
+              </div>
+              <p class="text-center mt-3">
+                Already have an account??<a
+                  [routerLink]="['/authentication/signin']"
+                >
+                  Log in</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

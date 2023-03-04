@@ -1,0 +1,155 @@
+.overlay {
+  position: absolute;
+  // width: 100%;
+  // height: 100%;
+  z-index: 1000;
+  left: 0px;
+  // top: 50%;
+  opacity: 0.5;
+  // filter: alpha(opacity=50);
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 600px;
+  overflow: auto;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+p {
+  margin-bottom: 0 !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.custom-span {
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.area-list.mat-list-item,
+.area-list.mat-list-option {
+  height: 30px !important;
+}
+.mat-form-field-label {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+.mat-form-field-flex > .mat-form-field-infix {
+  padding: 0.4em 0px !important;
+}
+.mat-form-field-label-wrapper {
+  top: -1.35em !important;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float
+  .mat-form-field-label {
+  transform: translateY(-1.1em) scale(0.75) !important;
+  font-size: 13px !important;
+}
+
+.mat-form-field-label {
+  font-weight: bold !important;
+  color: #666666ab !important;
+}
+
+.mat-form-field-wrapper {
+  margin-bottom: -10px;
+  margin-top: -5px;
+}
+.filter-form .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+.filter-header .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.square-select-radio {
+  .mat-radio-outer-circle {
+    border-radius: 20%;
+  }
+  .mat-radio-inner-circle {
+    border-radius: 20%;
+  }
+}
+.list-border {
+  border-bottom: 1px solid #f3f3f3;
+}
+.text-border {
+  border: 1px solid #f3f3f3;
+}
+.mat-list-option:last-child {
+  border: 0px;
+}
+.mat-dialog-container {
+  padding: 0 0 0 0 !important;
+}
+.mat-button-focus-overlay {
+  background-color: transparent !important;
+}
+
+.loader {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(51, 51, 51, 0.09);
+  /* opacity: 0; */
+  transition: opacity 1s ease-in-out;
+  z-index: 21;
+}
+
+.loader-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin-left: -75px;
+  margin-top: -100px;
+}
+//loader css
+.loader-show {
+  display: block;
+}
+section.content {
+  margin-left: 15px !important;
+}
+.fitness-image {
+  height: 40px;
+}
+.custom-color {
+  color: #5b6fa3;
+}
+.profile-avtar .avatar-content {
+  font-size: 20px !important;
+}
+.profile-avtar-icon .avatar-content {
+  font-size: 16px !important;
+}
+.navbar-nav.navbar-right {
+  line-height: 0px !important;
+}
+.profile-image {
+  height: 16px;
+  margin-top: -8px;
+}
+.d-grid {
+  display: grid;
+}

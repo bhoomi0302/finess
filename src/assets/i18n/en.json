@@ -1,0 +1,164 @@
+{
+  "MENU": {
+    "RECEPTION": {
+      "TEXT": "Reception",
+      "LIST": {
+        "REGISTRATION": "Registration",
+        "CALENDAR": "Calendar",
+        "WAITINGROOM": "Waiting Room",
+        "INBOUNDREFERRALS": "Inbound Referrals"
+      }
+    },
+    "TRANSCRIPTION": {
+      "TEXT": "Transcription",
+      "LIST": {
+        "DASHBOARD": "Dashboard",
+        "TRANSCRIBE": "Transcribe",
+        "TRANSCRIPTIONTEMPLATES": "Transcription Templates"
+      }
+    },
+    "MANAGEMENT": {
+      "TEXT": "Management",
+      "LIST": {
+        "DASHBOARD": "Dashboard",
+        "PHYSDASHBOARD": "Phys. Dashboard",
+        "ENCOUNTERS": "Encounters",
+        "PATIENTS": "Patients",
+        "REPORTS": "Reports",
+        "CORRESPONDENCE": "Correspondence",
+        "PEERREVIEW": "Peer Review"
+      }
+    },
+    "BILLING": {
+      "TEXT": "Billing",
+      "LIST": {
+        "DASHBOARD": "Dashboard",
+        "CLAIMS": "Claims",
+        "FILEHUB": "File Hub",
+        "SUMMARY": "Summary",
+        "CASH": "Cash",
+        "BILLINGCODEMAPPING": "Billing Code Mapping",
+        "CASHFREEREVIEW": "Cash Free Review",
+        "READINGPHYSGROUPS": "Reading Phys. Groups"
+      }
+    },
+    "ADMINISTRATION": {
+      "TEXT": "Administration",
+      "LIST": {
+        "STAFF": "Employee",
+        "SERVICELIST": "Service List",
+        "CALENDARSETUP": "Calendar Setup",
+        "CLINICINFO": "Clinic Info",
+        "USERGROUPPERMISSIONS": "User Group Permissions",
+        "REFERRERGROUPS": "Referrer Groups",
+        "RADIOLOGYSHAREDWORKLISTS": "Radiology Shared Worklists",
+        "ELECTONICFORMS": "Electonic Forms",
+        "PAYERS": "Payers",
+        "STUDYPREPFORPATIENTS": "Study Prep for Patients"
+      }
+    }
+  },
+
+  "MENUITEMS": {
+    "MAIN": {
+      "TEXT": "-- Main"
+    },
+    "HOME": {
+      "TEXT": "Home",
+      "LIST": {
+        "DASHBOARD1": "Dashboard 1",
+        "DASHBOARD2": "Dashboard 2",
+        "DOCTOR-DASHBOARD": "Doctor Dashboard",
+        "PATIENT-DASHBOARD": "Patient Dashboard"
+      }
+    },
+    "APPOINTMENTS": {
+      "TEXT": "Appointments",
+      "LIST": {
+        "VIEW-APPOINTMENT": "View Appointment",
+        "BOOK-APPOINTMENT": "Book Appointment",
+        "EDIT-APPOINTMENT": "Edit Appointment"
+      }
+    },
+    "DOCTORS": {
+      "TEXT": "Doctors",
+      "LIST": {
+        "ALL-DOCTOR": "All Doctors",
+        "ADD-DOCTOR": "Add Doctor",
+        "EDIT-DOCTOR": "Edit Doctor",
+        "PROFILE": "Doctor Profile"
+      }
+    },
+    "STAFF": {
+      "TEXT": "Employee",
+      "LIST": {
+        "ALL-STAFF": "All Employee",
+        "ADD-STAFF": "Add Employee",
+        "EDIT-STAFF": "Edit Employee",
+        "PROFILE": "Employee Profile"
+      }
+    },
+    "PATIENTS": {
+      "TEXT": "Patients",
+      "LIST": {
+        "ALL-PATIENT": "All Patients",
+        "ADD-PATIENT": "Add Patient",
+        "EDIT-PATIENT": "Edit Patient",
+        "PROFILE": "Patient Profile"
+      }
+    },
+    "ROOMS": {
+      "TEXT": "Room Allotment",
+      "LIST": {
+        "ALLOTED-ROOMS": "Alloted Rooms",
+        "NEW-ALLOTMENT": "New Allotment",
+        "EDIT-ALLOTMENT": "Edit Allotment"
+      }
+    },
+    "PAYMENTS": {
+      "TEXT": "Payments",
+      "LIST": {
+        "ALL-PAYMENTS": "All Payments",
+        "ADD-PAYMENT": "Add Payment",
+        "INVOICE": "Invoice"
+      }
+    },
+    "DOCTOR": {
+      "DASHBOARD": "Dashboard",
+      "APPOINTMENTS": "Appointments",
+      "DOCTORS": "Doctors",
+      "PATIENTS": "Patients",
+      "SETTINGS": "Settings",
+      "CHAT": "Chat"
+    },
+    "PATIENT": {
+      "TEXT": "Patient",
+      "DASHBOARD": "Dashboard",
+      "APPOINTMENTS": {
+        "TEXT": "Appointments",
+        "LIST": {
+          "TODAY": "Today Appointments",
+          "UPCOMING": "Upcoming Appointments",
+          "PAST": "Past Appointments"
+        }
+      },
+      "PRESCRIPTIONS": "Prescriptions",
+      "MEDICAL-RECORD": "Medical Record",
+      "BILLING": "Billing",
+      "CHAT": "Chat",
+      "SETTINGS": "Settings"
+    },
+    "APPS": {
+      "TEXT": "-- Apps"
+    },
+    "CALENDAR": {
+      "TEXT": "Calendar"
+    },
+    "TASK": {
+      "TEXT": "Task"
+    },
+    "CONTACTS": {
+      "TEXT": "Contacts"
+    }
+  }
+}

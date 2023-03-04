@@ -1,0 +1,21 @@
+<div class="confirm-dialog-box">
+  <div class="confirm-dialog-container">
+    <div class="confirm-dialog-header">
+      {{ confirmTitle }}
+      <div class="alert-badge-paper"></div>
+    </div>
+    <div class="confirm-dialog-content">
+      <div mat-dialog-content>
+        <span class="custom-span">{{ confirmMessage1 }}</span>
+        <span class="custom-span d-flex">
+          {{ confirmMessage2 }}
+        </span>
+      </div>
+    </div>
+    <div mat-dialog-actions class="pt-0 pb-4 msl-4">
+      <button mat-raised-button color="warn" (click)="dialogRef.close(false)">
+        {{ buttonLabel }}
+      </button>
+    </div>
+  </div>
+</div>

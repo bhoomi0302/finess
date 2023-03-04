@@ -1,0 +1,76 @@
+.profile-info-card {
+  background-color: #eeeeee75;
+  .profile-info {
+    padding: 10px 30px 10px 50px;
+    display: inline-flex;
+    width: 100%;
+    p {
+      text-align: left;
+      margin: 0;
+      display: flex;
+    }
+    span {
+      margin-right: 5px;
+      display: block;
+      font-size: 13px;
+    }
+  }
+  .profile-close {
+    color: #5b6fa3;
+  }
+}
+
+.profileSettings {
+  .password-expiry-info {
+    margin: 0 20px;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: 400;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .edit-profile {
+    padding: 20px 25px;
+  }
+
+  .form-header {
+    color: #5b6fa3;
+  }
+  img {
+    width: 20px;
+  }
+
+  .profile-form-info {
+    width: 100%;
+    span {
+      width: 20%;
+      float: left;
+      align-self: center;
+    }
+    p {
+      width: 5%;
+      float: left;
+      align-self: center;
+    }
+    .profile-form-data {
+      width: 60%;
+    }
+    .profile-form-button {
+      width: 15%;
+      float: left;
+    }
+    .mat-icon {
+      color: #5b6fa3;
+    }
+  }
+}
+
+.location {
+  display: flex;
+}
+.container-fluid > .navbar-header {
+  border-right: 0px !important;
+}
+.navbar-brand {
+  padding: 0px 25px !important;
+}

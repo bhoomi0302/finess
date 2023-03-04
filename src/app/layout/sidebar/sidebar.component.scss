@@ -1,0 +1,16 @@
+.sidebar-img {
+  height: 20px;
+  float: left;
+  margin-top: 3px;
+}
+
+.sidebar .menu .menu-toggle:before {
+  content: "" !important;
+}
+.sidebar .menu .list li.active .menu-top {
+  background-color: white;
+  cursor: default;
+}
+.sidebar .menu .ml-menu li.active a {
+  background-color: #f0f3fb !important;
+}
